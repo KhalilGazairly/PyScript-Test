@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyScript Test</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+</head>
+<body>
+    <div style="margin: auto; text-align: center;">
+
+        <h1>Hello</h1>
+     
+        <py-script> 
+print('Now you can!') 
+print("Let's compute π:")
+def wallis(n):
+    pi = 2
+    for i in range(1,n):
+        pi *= 4 * i ** 2 / (4 * i ** 2 - 1)
+    return pi
+
+pi = wallis(100000)
+s = f"π is approximately {pi:.3f}"
+print(s)
+        </py-script>
+    </div>
+    
+
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+</body>
+</html>
